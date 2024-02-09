@@ -1,4 +1,5 @@
 location = (6.51, 3.39, 'Lagos', 'Nigeria')
+my_name = tuple('Christopher')
 
 
 def test_tuples():
@@ -16,3 +17,10 @@ def test_tuple_unpacking():
     assert longitude == 3.39
     assert city == 'Lagos'
     assert country == 'Nigeria'
+
+
+def test_create_tuple_from_tuple_function():
+    assert type(my_name) == tuple
+    assert len(my_name) == 11
+    assert 'x' not in my_name
+    assert len(my_name[1:]) == 10
