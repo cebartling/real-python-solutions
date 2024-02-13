@@ -29,3 +29,12 @@ def test_list_indexing():
     food = ['rice', 'beans', 'broccoli', 'bread', 'pizza']
     assert food[-1] == 'pizza'
     assert food[0] == 'rice'
+
+
+def test_list_string_splitting():
+    breakfast = "eggs, fruit, orange juice".split(', ')
+    assert len(breakfast) == 3
+    lengths = [len(x) for x in breakfast]
+    assert lengths[0] == 4
+    assert lengths[1] == 5
+    assert lengths[2] == 12

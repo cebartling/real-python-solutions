@@ -24,3 +24,17 @@ def test_create_tuple_from_tuple_function():
     assert len(my_name) == 11
     assert 'x' not in my_name
     assert len(my_name[1:]) == 10
+
+
+def test_nested_tuples():
+    data = ((1, 2), (3, 4))
+    row = 1
+    for datum in data:
+        print(f'\nRow {row} sum: {sum(datum)}')
+        row += 1
+
+
+def test_nested_tuples_enumerate_function():
+    data = ((1, 2), (3, 4))
+    for row, datum in enumerate(data, start=1):
+        print(f'\nRow {row} sum: {sum(datum)}')
