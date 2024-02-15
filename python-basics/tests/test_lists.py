@@ -38,3 +38,10 @@ def test_list_string_splitting():
     assert lengths[0] == 4
     assert lengths[1] == 5
     assert lengths[2] == 12
+
+
+def test_numbers_list_sorting():
+    numbers = [4, 3, 2, 1]
+    copy_of_numbers = numbers[:]
+    copy_of_numbers.sort()
+    assert copy_of_numbers == [1, 2, 3, 4]
